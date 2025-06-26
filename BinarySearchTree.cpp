@@ -108,6 +108,15 @@ public:
     inorder(ptr->rightchild);
 }
 
+void preorder(Node *ptr)
+{
+    if (isEmpty())
+    {
+        cout << "Tree is empty" << endl;
+        return;
+    }
+}
+
 void postorder(Node *ptr)
 {
     if (isEmpty())
@@ -123,5 +132,9 @@ void postorder(Node *ptr)
     postorder (ptr->rightchild);
     cout <<  ptr->info <<  " "; //parent
 }
+bool isEmpty()
+{
+    // Checks if the tree is empty
+    return ROOT == nullptr;
+}
 };
-
