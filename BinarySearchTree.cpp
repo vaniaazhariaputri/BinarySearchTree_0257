@@ -42,9 +42,19 @@ public:
         newNode->leftchild = nullptr;
         newNode->rightchild = nullptr;
 
-        // Step 4: Locate the node which will be the parent of the noe to be inserted
+        // Step 4: Locate the node which will be the parent of the nodee to be inserted
         Node *parent = nullptr;
         Node *currentNode = nullptr;
         search(x, parent, currentNode);
+
+        // Step 5: If parent is NULL (Tree is empty)
+        if (parent == nullptr)
+        {
+            // 5a: Mark the new node as ROOT
+            ROOT =newNode;
+
+            // 5b: Exit
+            return;
+        }
 
         
