@@ -12,7 +12,7 @@ public:
     Node()
     {
         leftchild = nullptr; // Intialieze left hild to null
-        right = nullptr; // Intialieze right child to null
+        rightchild = nullptr; // Intialieze right child to null
     }
 };
 
@@ -31,6 +31,12 @@ public:
         int x;
         cout << "Masukkan nilai: ";
         cin >> x;
+
+        // Step 1: Allocate memory for the new node
+        Node *newNode = new Node();
+
+        // Step 2: Assign value to the data field of new node
+        newNode->info = x;
 
     }
 };
